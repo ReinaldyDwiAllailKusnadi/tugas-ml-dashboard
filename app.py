@@ -10,7 +10,7 @@ st.set_page_config(
     page_title="ERP SCM | Late Delivery Prediction",
     page_icon="🚚",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
 # =========================================================
@@ -268,6 +268,9 @@ st.markdown("""
     #MainMenu {visibility: hidden;}
     footer {visibility: hidden;}
     header {visibility: hidden;}
+    [data-testid="collapsedControl"] {
+        display: none !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -443,20 +446,7 @@ def build_model_input_from_csv(uploaded_df):
 model, fitur = load_model_and_features()
 data = load_dataset()
 
-# =========================================================
-# SIDEBAR
-# =========================================================
-st.sidebar.markdown("## 🚚 ERP SCM")
-st.sidebar.markdown("### Late Delivery Prediction")
-st.sidebar.markdown("---")
-st.sidebar.markdown("**Project**")
-st.sidebar.write("Artificial Intelligence pada ERP")
-st.sidebar.markdown("**Modul**")
-st.sidebar.write("Supply Chain Management")
-st.sidebar.markdown("**Algoritma**")
-st.sidebar.write("Random Forest Classifier")
-st.sidebar.markdown("---")
-st.sidebar.caption("Prototype dashboard untuk prediksi risiko keterlambatan pengiriman.")
+# Sidebar removed
 
 # =========================================================
 # HERO
