@@ -132,6 +132,11 @@ st.markdown("""
         gap: 8px;
     }
 
+    div[data-testid="stRadio"] label,
+    div[data-testid="stRadio"] label * {
+        color: #0F172A !important;
+    }
+
     div[data-testid="stRadio"] label {
         background: #F8FAFC;
         border: 1px solid #E2E8F0;
@@ -140,13 +145,16 @@ st.markdown("""
         min-width: 150px;
         justify-content: center;
         transition: all 0.2s ease-in-out;
-        color: #0F172A !important;
+    }
+
+    div[data-testid="stRadio"] label:hover,
+    div[data-testid="stRadio"] label:hover * {
+        color: #1D4ED8 !important;
     }
 
     div[data-testid="stRadio"] label:hover {
         background: #EFF6FF;
         border-color: #3B82F6;
-        color: #1D4ED8 !important;
     }
 
     div[data-testid="stRadio"] label[data-baseweb="radio"] > div:first-child {
